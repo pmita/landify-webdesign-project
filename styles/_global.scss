@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+    line-height: 1.3;
+  }
+    
+  h1 {
+    font-size: $header1;
+  }
+  
+  h2 {
+    font-size: $header2;
+  }
+  
+  h3 {
+    font-size: $header3;
+  }
+  
+  h4 {
+    font-size: $header4;
+  }
+  
+  p,
+  h6,
+  li,
+  a,
+  button {
+    font-size: $text;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  

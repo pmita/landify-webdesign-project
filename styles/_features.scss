@@ -1,0 +1,21 @@
+.features{
+    min-height: 80vh;
+    width: 100%;
+    padding: 100px 100px 25px 100px;
+    @include flex(column, space-evenly, center);
+    text-align: center;
+    h4{
+        padding: 25px 0;
+    }
+}
+
+.features-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    grid-template-rows: repeat(2, minmax(350px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+    justify-content: center;
+    align-items: center;
+}

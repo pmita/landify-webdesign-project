@@ -1,0 +1,50 @@
+$background-color: blue;
+$highlight-color: purple;
+
+$header1: 4rem;
+$header2: 3.2rem;
+$header3: 2.6rem;
+$header4: 2rem;
+$text: 1.8rem;
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin position($position, $size, $repeat) {
+  background-position: $position;
+  background-size: $size;
+  background-repeat: $repeat;
+}
+
+.action{
+  padding: 15px 20px;
+  color: white;
+  background: $highlight-color;
+  border: 2px solid $highlight-color;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: $header4;
+
+}
+
+.action:hover{
+  color: $highlight-color;
+  background: white;
+  border: 2px solid $highlight-color;
+}
+
+
+@media screen and (max-width: 800px){
+  html{
+    font-size: 52%;
+  }
+}
+
+@import "global";
+@import "hero";
+@import "features";
+

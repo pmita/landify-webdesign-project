@@ -1,0 +1,44 @@
+header{
+    nav{
+        min-height: 10vh;
+        width: 100%;
+        padding: 10px 200px;
+        @include flex(row, space-between, center);
+        flex-wrap: wrap;
+        ul{
+            flex: 1 1 40rem;
+            @include flex(row, space-evenly, center);
+            #logo{
+                margin-top: 5px;
+            }
+        }
+        .nav-buttons{
+            flex: 1 1 40rem;
+            @include flex(row, flex-end, center);
+            a{
+                margin: 0 5px;
+            }
+        }
+    }
+}
+
+.hero{
+    min-height: 90vh;
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    @include flex(column, space-between, center);
+    h1{
+        font-weight: bold;
+        text-align: center;
+    }
+    .background-blob{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        z-index: -1;
+        width: 100%;
+        height: auto;
+    }
+}
