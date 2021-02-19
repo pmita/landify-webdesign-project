@@ -1,0 +1,24 @@
+.achievements{
+    min-height: 20vh;
+    width: 100%;
+    padding: 25px 50px;
+    @include flex(row, space-evenly, center);
+    flex-wrap: wrap;
+}
+.achievements-left{
+    flex: 1 1 40rem;
+}
+
+.achievements-right{
+    flex: 1 1 40rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, minmax(100px, 1fr));
+    gap: 2rem;
+    .mini-box{
+        @include flex(row, flex-start, center);
+        h4{
+            padding: 0 10px;
+        }
+    }
+}

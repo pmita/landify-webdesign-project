@@ -1,0 +1,26 @@
+.headline{
+    min-height: 70vh;
+    width: 100%;
+    padding: 50px 100px;
+    @include flex(row, space-evenly, stretch );
+    flex-wrap: wrap;
+}
+
+.headline-left{
+    flex: 1 1 40rem;
+    background: pink;
+    width: 100%;
+    @include flex(column, flex-end, center);
+}
+
+.headline-right{
+    flex: 1 1 40rem;
+    @include flex(column, space-evenly, flex-start);
+    padding: 0 50px;
+    button{
+        border: none;
+        background: white;
+        color: pink;
+        text-decoration: underline;
+    }
+}
