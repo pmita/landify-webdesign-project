@@ -1,0 +1,24 @@
+.ideas{
+    min-height: 60vh;
+    width: 100%;
+    padding: 50px 100px;
+    @include flex(column, space-between, center);
+}
+
+.ideas-content{
+    @include flex(row, space-between, center);
+    flex-wrap: wrap;
+    h1{
+        flex: 1 1 40rem;
+    }
+    p{
+        flex: 1 1 40rem;
+    }
+}
+
+.ideas-banner{
+    min-height: 30vh;
+    width: 100%;
+    background: url("../img/bulbs.png");
+    
+}
