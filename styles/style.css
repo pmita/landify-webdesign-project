@@ -492,6 +492,9 @@ header nav .nav-buttons a {
   min-height: 30vh;
   width: 100%;
   background: url("../img/bulbs.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .app-store {
