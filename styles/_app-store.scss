@@ -1,0 +1,26 @@
+.app-store{
+    min-height: 60vh;
+    width: 100%;
+    padding: 0 100px;
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    background: #2EC5CE;
+}
+
+.app-store-content{
+    flex: 1 1 40rem;
+    height: 40vh;
+    @include flex(column, space-evenly, flex-start);
+}
+
+.app-store-images{
+    flex: 1 1 40rem;
+    height: 60vh;
+    @include flex(row, center, center);
+    img:nth-child(1){
+        align-self: flex-start;
+    }
+    img:nth-child(2){
+        align-self: flex-end;
+    }
+}
