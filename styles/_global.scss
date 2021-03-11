@@ -8,6 +8,10 @@
     font-size: 62.5%;
     line-height: 1.3;
   }
+
+  body{
+    overflow-x: hidden;
+  }
     
   h1 {
     font-size: $header1;

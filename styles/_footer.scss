@@ -32,7 +32,3 @@ footer{
     height: 30vh;
     @include flex(column, space-evenly, flex-end);
 }
-
-@media and screen (max-wdith: 500px){
-    /*Need to add breaking points at this stage*/
-}

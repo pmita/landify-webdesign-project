@@ -2,26 +2,39 @@ header{
     nav{
         min-height: 10vh;
         width: 100%;
-        padding: 10px 200px;
+        padding: 10px 100px;
         @include flex(row, space-between, center);
         flex-wrap: wrap;
-        ul{
-            flex: 1 1 40rem;
-            @include flex(row, space-evenly, center);
-            #logo{
-                margin-top: 5px;
-            }
+        #logo{
+            margin-top: 5px;
+            flex: 1;
         }
-        .nav-buttons{
-            flex: 1 1 40rem;
-            @include flex(row, flex-end, center);
-            a{
-                margin: 0 5px;
-            }
+        ul{
+            flex: 1;
+            @include flex(row, space-evenly, center);
         }
     }
 }
 
+.nav-buttons{
+    flex: 1;
+    @include flex(row, flex-end, center);
+    a{
+        margin: 0 5px;
+    }
+}
+
+.burger{
+    display: none;
+    div{
+        width: 25px;
+        height: 2px;
+        margin: 5px;
+        background-color: $highlight-color;
+    }
+}
+
+/*Hero section styling*/
 .hero{
     min-height: 90vh;
     width: 80%;
@@ -40,5 +53,54 @@ header{
         z-index: -1;
         width: 100%;
         height: auto;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .nav-buttons{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links{
+        position: absolute;
+        right: 0;
+        top: 10vh;
+        width: 100%;
+        height: 90vh;
+        background: $highlight-color;
+        li {
+            opacity: 0;
+           a{
+            color: white;
+            &:hover{
+                text-decoration: underline;
+            }
+            } 
+        }
+        @include flex(column, space-evenly, center);
+        transform: translateX(100%);
+        transition: transform 1s ease;
+    }
+
+    .nav-active{
+        transform: translateX(0);
+    }
+}
+
+@keyframes navEase{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
